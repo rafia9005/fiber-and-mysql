@@ -28,7 +28,7 @@ exec("git init", { cwd: process.cwd() }, (error, stdout, stderr) => {
       }
 
       // Push the changes to the remote Git repository
-      exec("git push", { cwd: process.cwd() }, (error, stdout, stderr) => {
+      exec("git push origin main", { cwd: process.cwd() }, (error, stdout, stderr) => {
         if (error) {
           console.error("Error pushing changes to remote Git repository:", error);
           return;
